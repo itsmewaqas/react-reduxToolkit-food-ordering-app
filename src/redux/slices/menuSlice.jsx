@@ -4,11 +4,16 @@ const menuSlice = createSlice({
     name: 'menuSlice',
     initialState: {
         menuList: [],
+        selectedCard: [],
         loading: false,
         error: null,
     },
 
     reducers: {
+
+        getCardData: (state, action) => {
+            state.selectedCard = action.payload;
+        },
 
         addToCart: (state, action) => {
             state.menuList = addItem(state.menuList, action.payload)
@@ -30,6 +35,7 @@ const menuSlice = createSlice({
 
         ordersuccess: (state, action) => {
             state.menuList = []
+            state.selectedCard = []
         },
 
     },
@@ -69,7 +75,7 @@ const removeExistingItem = ((menuList, itemToRemove) => {
 });
 
 export default menuSlice.reducer;
-export const { addToCart, incrementItem, decrementItem, removeToCart, ordersuccess } = menuSlice.actions;
+export const { getCardData, addToCart, incrementItem, decrementItem, removeToCart, ordersuccess } = menuSlice.actions;
 
 
 

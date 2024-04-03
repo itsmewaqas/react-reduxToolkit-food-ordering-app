@@ -12,7 +12,7 @@ function OrderOnlineDetails(props) {
     const dispatch = useDispatch();
 
     const data = useSelector((state) => state);
-    console.log('data',data.cartList);
+    console.log('data',data);
 
     const [productItem, SetproductItem] = useState([]);
 
@@ -24,14 +24,12 @@ function OrderOnlineDetails(props) {
     }
 
     const addExistingItem = (item) => {
-        console.log('call addExistingItem', item);
         dispatch(incrementItem(
             item
         ))
     }
 
     const removeExistingItem = (item) => {
-        console.log('call removeExistingItem', item);
         dispatch(decrementItem(
             item
         ))
@@ -44,8 +42,6 @@ function OrderOnlineDetails(props) {
         })
         SetfilterMenu(filterMenuList);
     }, []);
-
-    //const filteredItems = data.cartList.filter((x) => x.id === item.id);
 
     return (
         <div>
@@ -65,7 +61,7 @@ function OrderOnlineDetails(props) {
                                             <button onClick={() => addExistingItem(item)}>+</button>
                                         </div>
                                     ))}
-                                    <button className='addBtn2'
+                                    <button className='cartBtn2'
                                         disabled={data.menuSlice.menuList.some((x) => (x.id == item.id))}
                                         onClick={() => addItem(item)}>Add To Cart</button>
                                 </li>

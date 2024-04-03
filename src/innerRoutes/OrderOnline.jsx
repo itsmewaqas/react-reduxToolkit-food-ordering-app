@@ -93,8 +93,6 @@ function OrderOnline() {
     useEffect(() => {
     }, []);
 
-
-
     return (
         <div>
             <h1>OrderOnline</h1>
@@ -111,7 +109,7 @@ function OrderOnline() {
                                 handleDropdown={(e) => selectLoction(e, item.id)} />
                             {data.restaurantSlice.restaurantList.some((x) => (x.id == item.id)) ?
                                 <button
-                                    className='editBtn'
+                                    className='cartBtn2'
                                     disabled={
                                         data.restaurantSlice.restaurantList.length == 0 ? true :
                                             data.menuSlice.menuList.length == 0 ? true :
@@ -122,7 +120,7 @@ function OrderOnline() {
                                 </button>
                                 :
                                 <button
-                                    className='addBtn'
+                                    className='cartBtn1'
                                     disabled={data.restaurantSlice.restaurantList.some((x) => (x.id !== item.id))}
                                     onClick={() => goToRestaurantDetail(item)}>
                                      <BiPlusCircle size={16} /> Add
@@ -132,7 +130,7 @@ function OrderOnline() {
                                 <button
                                     disabled={
                                         data.menuSlice.menuList.length > 0 ? true : false}
-                                    className='cancelBtn' onClick={() => cancelRes(item)}>
+                                    className='cartBtn2' onClick={() => cancelRes(item)}> 
                                     <BiXCircle size={16}  /> Cancel
                                 </button>
                                 : null}

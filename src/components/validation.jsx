@@ -67,6 +67,45 @@ function validateInfo({ values }) {
         errors.education = "Please select your education.";
     }
 
+    if (values.zipcode !== null) {
+        if (!values.zipcode) {
+            errors.zipcode = "Please enter your zipcode.";
+        }
+    }
+
+    if (values.paymentMethod !== null) {
+        if (!values.paymentMethod) {
+            errors.paymentMethod = "Please select your payment method.";
+        }
+    }
+
+    if (values.cardNumber !== null) {
+        if (!values.cardNumber) {
+            errors.cardNumber = "please inter your cardNumber";
+        } else if (values.cardNumber.length <= 15) {
+            errors.cardNumber = "card number need to be 16 numbers";
+        }
+    }
+
+    if (values.expiryDate !== null) {
+        if (!values.expiryDate) {
+            errors.expiryDate = "enter the expiry date";
+        }
+    }
+
+    if (values.cvc !== null) {
+        if (!values.cvc) {
+            errors.cvc = "enter the cvc code";
+        }
+    }
+
+    if (values.cardHolderName !== null) {
+        if (!values.cardHolderName) {
+            errors.cardHolderName = "enter the card holder name";
+        }
+    }
+    
+
     return errors;
 }
 

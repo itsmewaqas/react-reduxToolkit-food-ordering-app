@@ -8,7 +8,7 @@ const rootReducer = combineReducers({
     userDetail: userDetail,
     loginDetail: loginDetail,
     restaurantSlice: restaurantSlice,
-    menuSlice: menuSlice
+    menuSlice: menuSlice,
 
 
 });
