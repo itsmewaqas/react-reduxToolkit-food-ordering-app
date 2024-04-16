@@ -18,8 +18,8 @@ import ExisitingApplication from './innerRoutes/ExisitingApplication.jsx';
 import OrderOnline from './innerRoutes/OrderOnline.jsx';
 import OrderOnlineDetails from './innerRoutes/OrderOnlineDetails.jsx';
 import Checkout from './innerRoutes/Checkout.jsx';
+import Reservations from './innerRoutes/Reservations.jsx';
 import Users from './innerRoutes/Users.jsx';
-
 import NoMatch from './NoMatch.jsx';
 
 function Routers(props) {
@@ -54,6 +54,7 @@ function Routers(props) {
             <Route path="OrderOnline" element={<OrderOnline />} />
             <Route path="OrderOnlineDetails" element={<OrderOnlineDetails />} />
             <Route path="Checkout" element={<Checkout />} />
+            <Route path="Reservations" element={<Reservations />} />
             <Route path="*" element={<NoMatch />} />
           </Route>
         }

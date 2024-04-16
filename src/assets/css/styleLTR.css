@@ -1118,6 +1118,135 @@ ul.horizontalList li a.active{
 
 
 
+.resLeftBlock{
+  float: left;
+  padding: 15px 0px;
+  width: 25%;
+}
+.resRightBlock{
+  float: left;
+  padding: 15px 0px 15px 15px;
+  box-sizing: border-box;
+  width: 75%;
+}
+.checkSearchMain{
+  display: block;
+  padding: 15px 0px;
+  clear: both;
+}
+.checkSearchMain label{
+  float: left;
+  margin: 0px 5px 5px 0px;
+  padding: 5px;
+  font-size: 12px;
+  background-color: #fff;
+  border-radius: 5px;
+}
+.checkSearchMain label input[type=checkbox]{
+   vertical-align:middle;
+   margin-right: 5px;
+}
+ul.filterTab {
+  list-style: none;
+  margin: 0px;
+  padding: 15px 0px;
+  display: block;
+  clear: both;
+}
+ul.filterTab li{
+  text-align: center;
+  width: 128px;
+  margin: 0px 20px 20px 0px;
+  float: left;
+  font-family: "CircularStd-Medium";
+  font-weight: 400;
+}
+ul.filterTab li img{
+  display: block;
+  margin: 0px auto 10px;
+  width: 36px;
+}
+ul.filterTab li a{
+  padding: 10px;
+  display: block;
+  margin: 5px 0px;
+  font-size: 12px;
+  box-sizing: border-box;
+  border-radius: 5px;
+  cursor: pointer;
+  text-decoration: none;
+}
+.tabClick{
+  background-color: #fff;
+  color: #999;
+  border: #e1e1e1 solid 1px;
+}
+.tabActive{
+  background-color: #F6F1E9;
+  color: #000;
+  border: #e1e1e1 solid 1px;
+}
+
+ul.resCard{
+  margin: 0px;
+  padding: 0px;
+  list-style: none;
+  display: block;
+}
+ul.resCard li{
+  margin: 0px 15px 15px 0px;
+  padding: 0px;
+  display: block;
+  float: left;
+  width: 31%;
+  background-color: #fff;
+  border-radius: 5px;
+}
+ul.resCard li img{
+  margin: 15px auto;
+  display: block;
+  max-width: 50%;
+}
+ul.resCard li h1{
+  font-size: 16px;
+  line-height: 20px;
+  color: #000;
+  padding: 5px 0px;
+  text-align: center;
+  font-family: "CircularStd-Medium";
+  font-weight: 400;
+}
+ul.resCard li h1 span{
+  font-size: 14px;
+  line-height: 18px;
+  display: block;
+  color: #585858;
+  padding-top: 5px;
+}
+ul.resCard li h1 span svg{
+  vertical-align: middle;
+  margin-right: 5px;
+  display: inline;
+}
+ul.resCard li select{
+  width: 70%;
+  float: left;
+  margin: 10px;
+  background-color: #F6F1E9;
+  border: #e1e1e1 solid 1px;
+  font-size: 14px;
+  border-radius: 5px;
+}
+ul.resCard li button{
+  padding: 3px 10px 5px;
+  margin: 4px 10px 5px 0px;
+  float: right;
+  background-color: #F6F1E9;
+  border: #e1e1e1 solid 1px;
+  border-radius: 5px;
+}
+
+
 
 
 

@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Link, NavLink } from "react-router-dom";
-import { BiUserPin, BiMoneyWithdraw, BiCompass } from "react-icons/bi";
+import { BiUserPin, BiMoneyWithdraw, BiCompass, BiSpreadsheet } from "react-icons/bi";
 
 function DashSidebar(props) {
 
@@ -24,6 +24,10 @@ function DashSidebar(props) {
         {
           cMenuID: 4,
           cMenuItem: 'OrderOnline',
+        },
+        {
+          cMenuID: 5,
+          cMenuItem: 'Reservations',
         }
       ]
     },
@@ -55,6 +59,8 @@ function DashSidebar(props) {
         return <BiUserPin />;
       case "WealthManagment":
         return <BiMoneyWithdraw />;
+      // case "Reservations":
+      //   return <BiSpreadsheet />;
       default:
         return <BiCompass />
     }
