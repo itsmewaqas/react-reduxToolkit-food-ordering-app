@@ -1115,9 +1115,6 @@ ul.horizontalList li a.active{
   color: #555;
   cursor: not-allowed;
 }
-
-
-
 .resLeftBlock{
   float: left;
   padding: 15px 0px;
@@ -1186,7 +1183,6 @@ ul.filterTab li a{
   color: #000;
   border: #e1e1e1 solid 1px;
 }
-
 ul.resCard{
   margin: 0px;
   padding: 0px;
@@ -1203,7 +1199,7 @@ ul.resCard li{
   border-radius: 5px;
 }
 ul.resCard li img{
-  margin: 15px auto;
+  margin: 15px auto 0px;
   display: block;
   max-width: 50%;
 }
@@ -1211,7 +1207,8 @@ ul.resCard li h1{
   font-size: 16px;
   line-height: 20px;
   color: #000;
-  padding: 5px 0px;
+  padding: 5px 0px 10px;
+  margin: 0px;
   text-align: center;
   font-family: "CircularStd-Medium";
   font-weight: 400;
@@ -1231,20 +1228,104 @@ ul.resCard li h1 span svg{
 ul.resCard li select{
   width: 70%;
   float: left;
-  margin: 10px;
+  margin: 5px 10px 5px 10px;
+  padding: 3px 0px;
   background-color: #F6F1E9;
   border: #e1e1e1 solid 1px;
   font-size: 14px;
   border-radius: 5px;
 }
 ul.resCard li button{
-  padding: 3px 10px 5px;
+  padding: 2px 12px 2px;
   margin: 4px 10px 5px 0px;
   float: right;
   background-color: #F6F1E9;
   border: #e1e1e1 solid 1px;
   border-radius: 5px;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+.customDrop{
+  width: 100%;
+  border-radius:5px;
+  margin:0px 0px 10px 0px;
+  float: left;
+  background-color: #f8f8f8;
+  position: relative;
+}
+.customDrop button{
+ display: block;
+ background-color: #F6F1E9;
+ border-radius:5px;
+ padding: 15px;
+ box-sizing: border-box;
+ font-family: 'LexendDeca-Regular';
+ border: none;
+ color: #666;
+ cursor: pointer;
+ font-size: 14px;
+ width: 100%;
+ text-align: left;
+ z-index: 5;
+}
+.customDrop button dd{
+ margin: 0px;
+ display: inline;
+ position: relative;
+ top: 3px;
+}
+.customDrop button .leftImg{
+ float: left;
+ position: relative;
+ margin-right: 10px;
+}
+.customDrop button .rightiImg{
+ float: right;
+ position: relative;
+ top: 8px;
+}
+.customDrop ul{
+ margin: -7px 0px 0px;
+ padding: 15px 0px 0px; 
+ border-radius: 0px 0px 10px 10px;
+ list-style: none;
+ display: block;
+ background-color: #F6F1E9;
+ overflow: auto;
+ width: 100%;
+ z-index: 3;
+ position: absolute;
+}
+.customDrop ul li{
+ margin: 0px;
+ padding: 0px;
+ text-align: left;
+ display: block;
+ border-bottom:#6c7472 solid 1px ;
+}
+.customDrop ul li a{
+ padding: 15px;
+ box-sizing: border-box;
+ font-family: 'LexendDeca-Regular';
+ font-size: 14px;
+ line-height: 18px;
+ display: block;
+ color: #495e57;
+ cursor: pointer;
+}
+
+
+
 
 
 

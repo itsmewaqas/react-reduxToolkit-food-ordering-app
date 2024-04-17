@@ -199,7 +199,7 @@ function Reservations(props) {
                 <LocationSelect
                   menuData={em.branches}
                   handleDropdown={(e) => selectLoction(e, em.id)} />
-                <button onClick={() => goToReserved(em)}><BiPlusCircle color="#000" size={18} /></button>
+                <button onClick={() => goToReserved(em)}><BiPlusCircle color="#000" size={16} /></button>
               </li>
             ))}
           </ul>
