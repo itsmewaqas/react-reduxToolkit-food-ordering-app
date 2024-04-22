@@ -104,6 +104,39 @@ function validateInfo({ values }) {
             errors.cardHolderName = "enter the card holder name";
         }
     }
+
+
+
+    if (values.seating !== null) {
+        if (!values.seating) {
+            errors.seating = "Please select your seating.";
+        }
+    }
+
+    if (values.numberOfMembers !== null) {
+        if (!values.numberOfMembers) {
+            errors.numberOfMembers = "Please select members.";
+        }
+    }
+
+    if (values.selectTime !== null) {
+        if (!values.selectTime) {
+            errors.selectTime = "Please select time.";
+        }
+    }
+
+    if (values.occasion !== null) {
+        if (!values.occasion) {
+            errors.occasion = "Please select occasion.";
+        }
+    }
+
+    if (values.reservedDate !== null) {
+        if (!values.reservedDate) {
+            errors.reservedDate = "Please select date";
+        }
+    }
+
     
 
     return errors;
