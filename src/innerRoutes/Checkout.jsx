@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { useNavigate } from "react-router-dom";
 import { Scrollbars } from 'react-custom-scrollbars-2';
+import { Container, Row, Col, Table, Button, Form, Spinner } from 'react-bootstrap';
 import { connect, useSelector, useDispatch } from 'react-redux';
 import { addToCart, incrementItem, decrementItem, removeToCart, ordersuccess } from '../redux/slices/menuSlice';
 import { clearRestaurant } from '../redux/slices/restaurantSlice';
@@ -140,45 +141,67 @@ function Checkout(props) {
             {data.menuSlice.menuList.length == 0 ? null :
               <div>
                 <h2>before order placing fill required field otherwise order does not place!</h2>
-                <div className='gridContainer1'>
-                  <div className='fieldBox'>
-                    <label>Name</label>
-                    <input type='text' name='name' onChange={handleChnage} />
-                    {errors.name && <p className='error'>{errors.name}</p>}
-                  </div>
-                  <div className='fieldBox'>
-                    <label>Email</label>
-                    <input type='email' name='email' onChange={handleChnage} />
-                    {errors.email && <p className='error'>{errors.email}</p>}
-                  </div>
-                  <div className='fieldBox'>
-                    <label>Cell</label>
-                    <input type='text' name='cell' onChange={handleChnage} />
-                    {errors.cell && <p className='error'>{errors.cell}</p>}
-                  </div>
-                  <div className='fieldBox'>
-                    <label>Zip code</label>
-                    <input type='text' name='zipcode' onChange={handleChnage} />
-                    {errors.zipcode && <p className='error'>{errors.zipcode}</p>}
-                  </div>
-                  <div className='textareaBox'>
-                    <label>Devilery Address</label>
-                    <textarea rows="4" name='address' onChange={handleChnage}></textarea>
-                    {errors.address && <p className='error'>{errors.address}</p>}
-                  </div>
-                  <div className='radiolist'>
-                    <label>Select Payment Method</label>
-                    <div className='radiolist'>
-                      <label className=''>
-                        <input type="radio" name='paymentMethod' checked={values.paymentMethod === 'cashOnDevilery'} value="cashOnDevilery" onChange={handleChnage} />
-                        Cash On Devilery</label>
-                      <label className=''>
-                        <input type="radio" name='paymentMethod' checked={values.paymentMethod === 'onlinePayment'} value="onlinePayment" onChange={handleChnage} />
-                        Online Payment </label>
-                    </div>
-                  </div>
-                </div>
-
+                <Row>
+                  <Col md={6}>
+                    <Form.Group className="mb-3">
+                      <Form.Label>Name</Form.Label>
+                      <Form.Control type='text' name='name' onChange={handleChnage} />
+                      {errors.name && <p className='error'>{errors.name}</p>}
+                    </Form.Group>
+                  </Col>
+                  <Col md={6}>
+                    <Form.Group className="mb-3">
+                      <Form.Label>Email</Form.Label>
+                      <Form.Control type='email' name='email' onChange={handleChnage} />
+                      {errors.email && <p className='error'>{errors.email}</p>}
+                    </Form.Group>
+                  </Col>
+                  <Col md={6}>
+                    <Form.Group className="mb-3">
+                      <Form.Label>Cell</Form.Label>
+                      <Form.Control type='text' name='cell' onChange={handleChnage} />
+                      {errors.cell && <p className='error'>{errors.cell}</p>}
+                    </Form.Group>
+                  </Col>
+                  <Col md={6}>
+                    <Form.Group className="mb-3">
+                      <Form.Label>Zip code</Form.Label>
+                      <Form.Control type='text' name='zipcode' onChange={handleChnage} />
+                      {errors.zipcode && <p className='error'>{errors.zipcode}</p>}
+                    </Form.Group>
+                  </Col>
+                  <Col md={12}>
+                    <Form.Group className="mb-3">
+                      <Form.Label>Devilery Address</Form.Label>
+                      <Form.Control as="textarea" rows="4" name='address' onChange={handleChnage} />
+                      {errors.address && <p className='error'>{errors.address}</p>}
+                    </Form.Group>
+                  </Col>
+                  <Col md={6}>
+                    <Form.Group className="mb-3">
+                      <Form.Label>Select Payment Method</Form.Label>
+                      <br />
+                      <Form.Check
+                        inline
+                        type="radio"
+                        label="Cash On Devilery"
+                        name='paymentMethod'
+                        checked={values.paymentMethod === 'cashOnDevilery'}
+                        value="cashOnDevilery"
+                        onChange={handleChnage}
+                      />
+                      <Form.Check
+                        inline
+                        type="radio"
+                        label="Online Payment"
+                        name='paymentMethod'
+                        checked={values.paymentMethod === 'onlinePayment'}
+                        value="onlinePayment"
+                        onChange={handleChnage}
+                      />
+                    </Form.Group>
+                  </Col>
+                </Row>
                 {data.menuSlice.selectedCard == 0 ? null
                   :
                   <div className='radiolist'>

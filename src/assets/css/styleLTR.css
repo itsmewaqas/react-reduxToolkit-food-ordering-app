@@ -716,16 +716,6 @@ ul.horizontalList li a.active{
   padding: 8px 0px 0px !important;
   margin: 0px;
 }
-
-
-
-
-
-
-
-
-
-
 .overlay {
   width: 100%;
   height: 100%;
@@ -820,20 +810,7 @@ ul.horizontalList li a.active{
   font-weight: bold;
   cursor: pointer;
 }
-
-
-
-.scrolleItems{
-  width: 400px;
-  display: flex;
-  flex-direction: row;
-  overflow-x: scroll;
-  justify-content: space-between;
-}
-.scrolleItems div{
-  width: 100px;
-}
-.checkoutleftblock{
+.resFormLeft{
   float: left;
   width: 800px;
   padding: 15px;
@@ -841,195 +818,66 @@ ul.horizontalList li a.active{
   background-color: #fff;
   border-radius: 5px;
 }
-.checkoutleftblock h2{
+.resFormLeft h2{
   color: #000;
   font-size: 16px;
   line-height: 20px;
   padding:0px 0px 15px;
   box-sizing: border-box;
 }
-.fieldBox{
-  margin: 0px 10px 0px 0px;
-  float: left;
-  width: 48.5%;
-}
-.fieldBox label{
+.resFormRight{
   display: block;
-  font-size: 12px;
-  padding: 5px 0px;
-  color: #000;
-} 
-.fieldBox input[type=text] {
-  width: 100%;
-  height: 34px;
-  color: #000;
-  border: #ccc solid 1px;
-  background-color: #fff;
-  padding: 0px 10px;
-  box-sizing: border-box;
-  border-radius: 5px;
-}
-.fieldBox input[type=email] {
-  width: 100%;
-  height: 34px;
-  color: #000;
-  border: #ccc solid 1px;
-  background-color: #fff;
-  padding: 0px 10px;
-  box-sizing: border-box;
-  border-radius: 5px;
-}
-.textareaBox{
-  width: 98%;
-  float: left;
-  margin-right: 15px;
-}
-.textareaBox label{
-  display: block;
-  font-size: 12px;
-  padding: 5px 0px;
-  color: #000;
-} 
-.textareaBox textarea {
-  width: 100%;
-  color: #000;
-  resize: none;
-  padding: 15px;
-  box-sizing: border-box;
-  border: #ccc solid 1px;
-  background-color: #fff;
-  box-sizing: border-box;
-  border-radius: 5px;
-}
-.paymentSelectionBox{
-  background-color: #fff;
-  margin:0px 0px 15px;
-  display: block;
-  padding: 15px;
-  box-sizing: border-box;
-  border: #ccc solid 1px;
-  border-radius: 5px;
-}
-.paymentSelectionBox label{
-  color: #000;
-  font-size: 14px;
-  font-family: 'LexendDeca-Regular';
-  padding-right: 30px;
-}
-.paymentSelectionBox input[type="radio"] {
-  margin: 5px 10px 0px 0px;
-}
-.paymentform{
-  display: block;
-  box-sizing: border-box;
-  padding: 0px 0px 15px;
-  background-color: #fff;
-  width: 50%;
-}
-.paymentform h4{
-  color: #000;
-  font-size: 16px;
-  line-height: 20px;
-  padding:0px 0px 15px;
-  box-sizing: border-box;
-}
-.paymentform label{
-  display: block;
-  font-size: 12px;
-  padding: 10px 0px;
-  color: #000;
-  clear: both;
-}
-.paymentfield1{
-  width: 100%;
-}
-.paymentfield2{
-  width: 50%;
-  float: left;
-}
-.paymentinput1 {
-  width: 99%;
-  height: 34px;
-  color: #000;
-  border: #ccc solid 1px;
-  background-color: #fff;
-  padding: 0px 10px;
-  box-sizing: border-box;
-  border-radius: 5px;
-}
-.paymentinput2 {
-  width: 98%;
-  float: left;
-  height: 34px;
-  color: #000;
-  border: #ccc solid 1px;
-  background-color: #fff;
-  padding: 0px 10px;
-  box-sizing: border-box;
-  border-radius: 5px;
-}
-.paymentform button {
-  font-size: 14px;
-  line-height: 20px;
-  padding: 10px;
-  margin: 15px 0px 0px;
-  border: none;
-  background-color: #000;
-  box-sizing: border-box;
-  width: 100%;
-  display: block;
-  color: #fff;
-  cursor: pointer;
-  font-family: 'LexendDeca-Regular';
-  border-radius: 5px;
-}
-.checkoutrightblock{
-  float: right;
-  width: 355px;
   background-color: #fff;
   border-radius: 5px;
 }
-.checkoutrightblock h3{
+.resFormRight h3{
    color: #000;
-   font-size: 16px;
-   line-height: 20px;
-   padding:15px 15px 0px;
+   font-size: 18px;
+   line-height: 22px;
+   padding:15px;
    box-sizing: border-box;
+   font-family: "CircularStd-Medium";
 }
-.checkoutrightblock ul{
+.resFormRight ul{
    margin:0px;
-   padding:0px;
+   padding:0px 15px 30px;
+   box-sizing: border-box;
    list-style: none;
    display: block;
+   position: relative;
 }
-.checkoutrightblock ul li{
+.resFormRight ul li{
   margin:0px;
-  padding: 25px 15px 0px;
+  padding: 10px 0px;
   box-sizing: border-box;
   text-align: left;
+  font-size: 14px;
+  line-height: 18px;
   display: block;
   clear: both;
   position: relative;
   border-bottom: #f7f7f7 solid 1px;
   overflow: auto;
 }
-.checkoutrightblock ul li p{
-  margin:0px;
-  padding: 0px 0px 2px;
-  font-size: 11px;
-  color: #000;
-  font-family: 'LexendDeca-Regular';
-}
-.checkoutrightblock ul li p:nth-child(3){
+.resFormRight ul li span{
   color: green;
+  display: inline;
 }
-.checkoutrightblock ul li img{
-  vertical-align: middle;
-  margin-right: 10px;
+.resFormRight ul li img{
   width: 75px;
   height: 75px;
-  float: left;
-  border-radius: 5px;
+  vertical-align: middle;
+  display: inline-block;
+  margin: 0px;
+  padding: 0px;
+}
+.resFormRight ul button{
+   position: absolute;
+   right: 20px;
+   top: 0px;
+   background-color: transparent;
+   border: none;
+   cursor: pointer;
 }
 .checkclosebtn{
   position: absolute;
@@ -1084,7 +932,7 @@ ul.horizontalList li a.active{
   padding: 5px 0px;
   text-align: left;
   clear: both;
-  font-family: 'LexendDeca-Regular';
+  font-family: 'CircularStd-Light';
   font-size: 14px;
   line-height: 18px;
   color: #646363;
@@ -1107,7 +955,7 @@ ul.horizontalList li a.active{
   display: block;
   color: #fff;
   cursor: pointer;
-  font-family: 'LexendDeca-Regular';
+  font-family: 'CircularStd-Light';
   border-radius: 5px;
 }
 .billBox button:disabled {
@@ -1245,86 +1093,70 @@ ul.resCard li button{
 }
 
 
-
-
-
-
-
-
-
-
-
-
-.customDrop{
-  width: 100%;
-  border-radius:5px;
-  margin:0px 0px 10px 0px;
+.checkoutleftblock{
   float: left;
-  background-color: #f8f8f8;
+  width: 800px;
+  padding: 15px;
+  box-sizing: border-box;
+  background-color: #fff;
+  border-radius: 5px;
+}
+.checkoutleftblock h2{
+  color: #000;
+  font-size: 16px;
+  line-height: 20px;
+  padding:0px 0px 15px;
+  box-sizing: border-box;
+}
+.checkoutrightblock{
+  float: right;
+  width: 355px;
+  background-color: #fff;
+  border-radius: 5px;
+}
+.checkoutrightblock h3{
+   color: #000;
+   font-size: 16px;
+   line-height: 20px;
+   padding:15px 15px 0px;
+   box-sizing: border-box;
+}
+.checkoutrightblock ul{
+   margin:0px;
+   padding:0px;
+   list-style: none;
+   display: block;
+}
+.checkoutrightblock ul li{
+  margin:0px;
+  padding: 25px 15px 0px;
+  box-sizing: border-box;
+  text-align: left;
+  display: block;
+  clear: both;
   position: relative;
+  border-bottom: #f7f7f7 solid 1px;
+  overflow: auto;
 }
-.customDrop button{
- display: block;
- background-color: #F6F1E9;
- border-radius:5px;
- padding: 15px;
- box-sizing: border-box;
- font-family: 'LexendDeca-Regular';
- border: none;
- color: #666;
- cursor: pointer;
- font-size: 14px;
- width: 100%;
- text-align: left;
- z-index: 5;
+.checkoutrightblock ul li p{
+  margin:0px;
+  padding: 0px 0px 2px;
+  font-size: 11px;
+  color: #000;
+  font-family: "CircularStd-Medium";
+  font-weight: 400;
 }
-.customDrop button dd{
- margin: 0px;
- display: inline;
- position: relative;
- top: 3px;
+.checkoutrightblock ul li p:nth-child(3){
+  color: green;
 }
-.customDrop button .leftImg{
- float: left;
- position: relative;
- margin-right: 10px;
+.checkoutrightblock ul li img{
+  vertical-align: middle;
+  margin-right: 10px;
+  width: 75px;
+  height: 75px;
+  float: left;
+  border-radius: 5px;
 }
-.customDrop button .rightiImg{
- float: right;
- position: relative;
- top: 8px;
-}
-.customDrop ul{
- margin: -7px 0px 0px;
- padding: 15px 0px 0px; 
- border-radius: 0px 0px 10px 10px;
- list-style: none;
- display: block;
- background-color: #F6F1E9;
- overflow: auto;
- width: 100%;
- z-index: 3;
- position: absolute;
-}
-.customDrop ul li{
- margin: 0px;
- padding: 0px;
- text-align: left;
- display: block;
- border-bottom:#6c7472 solid 1px ;
-}
-.customDrop ul li a{
- padding: 15px;
- box-sizing: border-box;
- font-family: 'LexendDeca-Regular';
- font-size: 14px;
- line-height: 18px;
- display: block;
- color: #495e57;
- cursor: pointer;
-}
-
-
 
 
 

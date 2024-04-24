@@ -105,8 +105,6 @@ function validateInfo({ values }) {
         }
     }
 
-
-
     if (values.seating !== null) {
         if (!values.seating) {
             errors.seating = "Please select your seating.";
@@ -137,7 +135,11 @@ function validateInfo({ values }) {
         }
     }
 
-    
+    if (values.specialRequest !== null) {
+        if (!values.specialRequest) {
+            errors.specialRequest = "if you want to add special Request";
+        }
+    }
 
     return errors;
 }
