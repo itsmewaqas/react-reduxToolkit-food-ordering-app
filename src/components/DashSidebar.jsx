@@ -1,66 +1,40 @@
 import React, { useState } from 'react';
 import { Link, NavLink } from "react-router-dom";
-import { BiUserPin, BiMoneyWithdraw, BiCompass, BiSpreadsheet } from "react-icons/bi";
+import { BiHomeSmile, BiUser, BiBowlHot, BiCheckShield, BiCompass } from "react-icons/bi";
 
 function DashSidebar(props) {
 
   const menulist = [
     {
       menuID: 1,
-      menuTitle: 'Users',
-      nestedMenulist: [
-        {
-          cMenuID: 1,
-          cMenuItem: 'SearchUserDetails',
-        },
-        {
-          cMenuID: 2,
-          cMenuItem: 'UserDetails',
-        },
-        {
-          cMenuID: 3,
-          cMenuItem: 'Users',
-        },
-        {
-          cMenuID: 4,
-          cMenuItem: 'OrderOnline',
-        },
-        {
-          cMenuID: 5,
-          cMenuItem: 'Reservations',
-        }
-      ]
+      menuTitle: 'Home',
     },
     {
       menuID: 2,
-      menuTitle: 'WealthManagment',
-      nestedMenulist: [
-        {
-          cMenuID: 1,
-          cMenuItem: 'Subscription',
-        },
-        {
-          cMenuID: 2,
-          cMenuItem: 'CustomerView',
-        },
-        {
-          cMenuID: 3,
-          cMenuItem: 'ExisitingApplication',
-        }
-      ]
+      menuTitle: 'Users',
     },
+    {
+      menuID: 3,
+      menuTitle: 'OrderOnline',
+    },
+    {
+      menuID: 4,
+      menuTitle: 'Reservations',
+    }
   ];
 
-  const [selectedMenu, selectedMenuSet] = useState('Users');
+  const [selectedMenu, selectedMenuSet] = useState('Home');
 
   const renderIcon = (icon) => {
     switch (icon) {
+      case "Home":
+        return <BiHomeSmile />;
       case "Users":
-        return <BiUserPin />;
-      case "WealthManagment":
-        return <BiMoneyWithdraw />;
-      // case "Reservations":
-      //   return <BiSpreadsheet />;
+        return <BiUser />;
+      case "OrderOnline":
+        return <BiBowlHot />;
+      case "Reservations":
+        return <BiCheckShield />;
       default:
         return <BiCompass />
     }
@@ -71,18 +45,18 @@ function DashSidebar(props) {
       <ul className='sidebar' id='scrollable'>
         {menulist?.map((item, index) => (
           <li key={index.toString()}>
-            <a to={item.menuTitle}
+            <Link to={item.menuTitle}
               className={selectedMenu === item.menuTitle ? 'active' : ''}
               onClick={() => selectedMenuSet(item.menuTitle)}>
               <i>{renderIcon(item.menuTitle)}</i>
-              <title className={props.titleCtrl}>{item.menuTitle}</title></a>
-            {selectedMenu === item.menuTitle &&
+              <title className={props.titleCtrl}>{item.menuTitle}</title></Link>
+            {/* {selectedMenu === item.menuTitle &&
               <ul>
                 {item.nestedMenulist?.map((cItem, index) => (
                   <li key={index.toString()}><Link to={cItem.cMenuItem}>{cItem.cMenuItem}</Link> </li>
                 ))}
               </ul>
-            }
+            } */}
           </li>
         ))}
       </ul>

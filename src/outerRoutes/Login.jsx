@@ -76,7 +76,7 @@ function Login() {
                       <Form.Control type="password" name="password" value={values.password} placeholder="***********" onChange={handleChnage} />
                       {errors.password && <p className='error'>{errors.password}</p>}
                     </Form.Group>
-                    <Button type='submit' variant="primary" className='mt-1'>Login</Button>
+                    <Button type='submit' variant="dark" className='mt-1'>Login</Button>
                   </div>
                 </form>
               </div>

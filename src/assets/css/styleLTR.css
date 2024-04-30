@@ -32,7 +32,7 @@ body {
   height: 100%;
   font-family: "CircularStd-Black";
   color: #000;
-  background-color: #fff;
+  background-color: #fffcf1 !important;
   margin: 0px;
   padding: 0px;
   -webkit-font-smoothing: antialiased;
@@ -157,7 +157,7 @@ ul{
   width: 275px;
   float: left;
   background:#fff;
-  padding:10px 10px 0px;
+  padding:2px 10px 0px;
   transition: all 0.4s;
 }
 .dHeader .logo {
@@ -188,7 +188,7 @@ ul{
   float: left;
   height: 100%; 
   box-sizing: border-box;
-  background-color: #00458a;
+  background-color: #fff;
   transition: all 0.4s;
   background-size: cover;
   position: fixed;
@@ -199,8 +199,8 @@ ul{
 ul#scrollable {  overflow-y: scroll;height:650px; } 
 ul#scrollable::-webkit-scrollbar {  width: 0px;  } 
 ul#scrollable::-webkit-scrollbar-track {  background-color: #fff; } 
-ul#scrollable::-webkit-scrollbar-thumb {   background-color: #00458a;  border-radius: 0px;  }
-ul:hover::-webkit-scrollbar-thumb {   background-color: #00458a; }
+ul#scrollable::-webkit-scrollbar-thumb {   background-color: #cce2d7;  border-radius: 0px;  }
+ul:hover::-webkit-scrollbar-thumb {   background-color: #cce2d7; }
 ul.sidebar {
   display: block;
   margin: 0px;
@@ -220,9 +220,9 @@ ul.sidebar li a {
   box-sizing: border-box;
   font-size: 16px;
   line-height: 20px;
-  border-left: #00458a solid 5px;
-  color: #fff;
+  color: #646161;
   text-decoration: none;
+  border-bottom: #eaeaea solid 1px;
   cursor: pointer;
   font-family: 'CircularStd-Light';
   font-weight: 400;
@@ -233,17 +233,16 @@ ul.sidebar li i {
   top: 0px;
   left: 5px;
   font-size: 24px;
-  color: #fff;
+  color: #646161;
 }
 ul.sidebar li>a.active i,
 ul.sidebar li:hover i {
-  color: #00458a;
+  color: #095f59;
 }
 ul.sidebar li:hover>a,
 ul.sidebar li>a.active {
-  border-left: #C90303 solid 5px;
-  background-color: #fff;
-  color: #000;
+  background-color: #cce2d7;
+  color: #095f59;
   -webkit-transition: all 0.4s;
   -moz-transition: all 0.4s;
   -o-transition: all 0.4s;
@@ -265,7 +264,7 @@ ul.sidebar li ul li {
   position: relative;
   text-align: left;
   box-sizing: border-box;
-  border-bottom: #83a2c1 solid 1px;
+  border-bottom: #646161 solid 1px;
   width: 100%;
 }
 ul.sidebar li ul li a {
@@ -304,7 +303,7 @@ ul.sidebar li:hover ul {
   width: 65px;
   float: left;
   min-height: 100vh;
-  background-color: #00458a;
+  background-color: #fff;
   background-size: cover;
   -webkit-transition: all 0.4s;
   -moz-transition: all 0.4s;
@@ -322,7 +321,7 @@ ul.sidebar li:hover ul {
   padding: 18.5px 15px;
   box-sizing: border-box;
   left: 65px;
-  background-color: #00458a;
+  background-color: #cce2d7;
   top: 0px;
   position: absolute;
   z-index: 88;
@@ -333,10 +332,10 @@ ul.sidebar li:hover ul {
   padding: 0px;
 }
 .dMain{
-  background-color: #00458a;
+  background-color: #fff;
 }
 .dContainer {
-  background-color: #EFF1F7;
+  background-color: #fffcf1;
   margin-top: 60px;
   box-sizing: border-box;
   overflow: hidden;
@@ -346,7 +345,7 @@ ul.sidebar li:hover ul {
   transition: all 0.4s;
 }
 .dContainerCollaps {
-  background-color: #EFF1F7;
+  background-color: #fffcf1;
   margin-top: 61px;
   box-sizing: border-box;
   overflow: hidden;
@@ -578,20 +577,21 @@ ul.horizontalList li a.active{
   margin: 0px;
   padding: 0px 0px 30px;
   list-style: none;
-  display: grid;
-  grid-template-columns: 225px 225px 225px 225px 225px;
-  flex-direction: row;
-  justify-content: space-between;
+  display: block;
 }
 .reservationListBlock ul li{
   padding: 5px;
-  margin: 0px 0px 70px;
+  margin: 0px 0px 80px 15px;
   box-sizing: border-box;
   box-sizing: border-box;
   background-color: #fff;
-  border-radius: 5px;
+  border-radius: 15px;
   position: relative;
+  width:23.6%;
+  display: block;
+  float:left;
   min-height: 180px;
+  box-shadow: 0px 0px 5px #ccc;
 }
 .reservationListBlock ul li img{
   margin: -55px auto 0px;
@@ -650,11 +650,11 @@ ul.horizontalList li a.active{
   width: 96%;
   padding: 6px 2px;
   border: none;
-  color: #666;
+  color: #000;
   font-size: 11px;
   margin: 10px 0px 10px 5px;
   border-radius: 5px;
-  background-color: #F6F1E9;
+  background-color: #faf7ea;
 }
 .cartBtn1{
   padding: 2px 4px;
@@ -665,7 +665,7 @@ ul.horizontalList li a.active{
   text-align: center;
   color: #000;
   cursor: pointer;
-  background-color: #F6F1E9;
+  background-color: #faf7ea;
   border-radius: 5px;
   border: none;
 }
@@ -745,7 +745,8 @@ ul.horizontalList li a.active{
   line-height: 16px;
   padding: 15px 0px;
   color: #000;
-  font-family: 'LexendDeca-Light';
+  font-family: "CircularStd-Medium";
+  font-weight: 400;
   border-bottom: #dfdfdf solid 1px;
 }
 .successBox p strong {
@@ -753,7 +754,8 @@ ul.horizontalList li a.active{
   padding: 0px 0px 5px;
   font-size: 14px;
   line-height: 18px;
-  font-family: 'LexendDeca-Light';
+  font-family: "CircularStd-Medium";
+  font-weight: 400;
   text-shadow: none;
 }
 .successBox ul{
@@ -964,15 +966,15 @@ ul.horizontalList li a.active{
   cursor: not-allowed;
 }
 .resLeftBlock{
-  float: left;
+  display: block;
   padding: 15px 0px;
-  width: 25%;
+  width: 100%;
 }
 .resRightBlock{
   float: left;
-  padding: 15px 0px 15px 15px;
+  padding: 15px 0px 15px 0px;
   box-sizing: border-box;
-  width: 75%;
+  width: 100%;
 }
 .checkSearchMain{
   display: block;
@@ -984,7 +986,7 @@ ul.horizontalList li a.active{
   margin: 0px 5px 5px 0px;
   padding: 5px;
   font-size: 12px;
-  background-color: #fff;
+  background-color: #f2e5d1;
   border-radius: 5px;
 }
 .checkSearchMain label input[type=checkbox]{
@@ -995,16 +997,16 @@ ul.filterTab {
   list-style: none;
   margin: 0px;
   padding: 15px 0px;
-  display: block;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
   clear: both;
 }
 ul.filterTab li{
   text-align: center;
-  width: 128px;
-  margin: 0px 20px 20px 0px;
+  width: 98.2px;
+  margin: 0px 10px 0px 0px;
   float: left;
-  font-family: "CircularStd-Medium";
-  font-weight: 400;
 }
 ul.filterTab li img{
   display: block;
@@ -1016,6 +1018,7 @@ ul.filterTab li a{
   display: block;
   margin: 5px 0px;
   font-size: 12px;
+  
   box-sizing: border-box;
   border-radius: 5px;
   cursor: pointer;
@@ -1025,11 +1028,13 @@ ul.filterTab li a{
   background-color: #fff;
   color: #999;
   border: #e1e1e1 solid 1px;
+  font-family: "CircularStd-Light";
+  font-weight: 500;
 }
 .tabActive{
-  background-color: #F6F1E9;
+  background-color: #f2e5d1;
   color: #000;
-  border: #e1e1e1 solid 1px;
+  border: #cfcfcf solid 1px;
 }
 ul.resCard{
   margin: 0px;
@@ -1042,9 +1047,10 @@ ul.resCard li{
   padding: 0px;
   display: block;
   float: left;
-  width: 31%;
+  width: 18.7%;
   background-color: #fff;
   border-radius: 5px;
+  box-shadow: 0px 0px 5px #ccc;
 }
 ul.resCard li img{
   margin: 15px auto 0px;
@@ -1074,7 +1080,7 @@ ul.resCard li h1 span svg{
   display: inline;
 }
 ul.resCard li select{
-  width: 70%;
+  width: 65%;
   float: left;
   margin: 5px 10px 5px 10px;
   padding: 3px 0px;
@@ -1091,8 +1097,6 @@ ul.resCard li button{
   border: #e1e1e1 solid 1px;
   border-radius: 5px;
 }
-
-
 .checkoutleftblock{
   float: left;
   width: 800px;
@@ -1157,6 +1161,73 @@ ul.resCard li button{
   float: left;
   border-radius: 5px;
 }
+.heroPic{
+  float: left;
+  margin: 0px 0px 15px;
+}
+ul.testimonialsList{
+  margin: 0px 0px 0px 10px;
+  padding: 0px;
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+ul.testimonialsList li{
+  padding: 15px 0px 20px;
+  margin: 0px 10px 10px 0px;
+  box-sizing: border-box;
+  background-color: #F6F1E9;
+  position: relative;
+  border-radius: 5px;
+}
+ul.testimonialsList li img{
+  margin: 0px 15px 15px;
+  border-radius: 5px;
+  width: 100px;
+  height: 100px;
+}
+ul.testimonialsList li h5{
+  color: #495e57;
+  font-family: "CircularStd-Medium";
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 20px;
+  padding: 5px 15px 0px;
+  display: block;
+}
+ul.testimonialsList li p{
+  color: #000;
+  clear: both;
+  font-size: 14px;
+  line-height: 20px;
+  font-family: "CircularStd-Medium";
+  font-weight: 400;
+  padding: 5px 15px 15px;
+  box-sizing: border-box;
+}
+.futureBox{
+   width: 200px;
+   margin: 15px;
+   padding: 15px;
+   box-sizing: border-box;
+   float: left;
+} 
+.futureBox img{
+  width: 100px;
+  margin: 15px;
+} 
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -1182,8 +1253,8 @@ ul.resCard li button{
   top: 0px;
   box-sizing: border-box;
   position: absolute !important;
-  background-color: #00458a;
-  color: #fff;
+  background-color: #cce2d7;
+  color: #095f59;
   z-index: 88;
   display: inline !important;
 }
@@ -1194,7 +1265,7 @@ ul.resCard li button{
   left: 65px;
   top: 50px;
   position: absolute;
-  background-color: #fff;
+  background-color: #cce2d7;
 }
 .dSidebarCollaps ul li ul {
   padding: 15px 0px 0px 0px;
@@ -1264,6 +1335,46 @@ ul.resCard li button{
   }
 .notificationMenu ul {
   right: -60px;
+}
+
+.reservationListBlock ul li {
+  width: 46%;
+}
+.reservationListBlock ul li h1 {
+  font-size: 12px;
+  line-height: 14px;
+}
+.checkoutleftblock {
+  float: none;
+  width: auto;
+  border-radius: 5px;
+  display: block;
+  margin-bottom: 10px;
+}
+.checkoutrightblock {
+  float: none;
+  width: auto;
+}
+ul.filterTab {
+  overflow-x: scroll;
+}
+ul.resCard li {
+  width: 46%;
+}
+ul.resCard li select {
+  width: 55%;
+}
+ul.resCard li h1 {
+  font-size: 12px;
+  line-height: 14px;
+}
+.resFormLeft {
+  float: none;
+  width: auto;
+  margin-bottom: 10px;
+}
+.successBox {
+  width: auto;
 }
 
 }

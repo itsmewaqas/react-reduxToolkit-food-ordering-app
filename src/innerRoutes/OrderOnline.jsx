@@ -20,24 +20,6 @@ function OrderOnline() {
     const data = useSelector((state) => state);
     console.log('data', data);
 
-
-    // const initalState = {
-    //     searchRoles: '',
-    //     checkValue: ''
-    // };
-
-    // const [values, setValues] = useState(initalState);
-    // const [errors, setErrors] = useState({});
-
-    // const handleChnage = e => {
-    //     const { name, value } = e.target;
-    //     setValues({
-    //         ...values,
-    //         [name]: value
-    //     })
-    // }
-
-
     const notify = () => toast.error("Please Select Branch", {
         position: "bottom-right",
         theme: "dark"

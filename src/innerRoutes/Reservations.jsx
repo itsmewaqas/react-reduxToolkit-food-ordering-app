@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { useNavigate } from "react-router-dom";
 import { Scrollbars } from 'react-custom-scrollbars-2';
-import { BiSolidStar,BiPlusCircle } from "react-icons/bi";
+import { BiSolidStar, BiPlusCircle } from "react-icons/bi";
 import { connect, useSelector, useDispatch } from 'react-redux';
 import validateInfo from '../components/validation';
 import RestaurantList from '../components/RestaurantList';
@@ -152,33 +152,38 @@ function Reservations(props) {
   return (
     <div>
       <ToastContainer />
-      <div className='container clearfix'>
+      <div className='container-fluid clearfix'>
         <h3>Reservations</h3>
         <div className='resLeftBlock'>
-          <div>
-            <label>Filter:</label>
-            <br />
-            <select onChange={selectCategory} className='form-control mt-2 mb-2'>
-              {getCategory.map((item, index) => {
-                return (
-                  <option key={index.toString()} value={item}>{item}</option>
-                )
-              })}
-            </select>
+          <div class="d-flex justify-content-between">
+            <div>
+              <label>Filter:</label>
+              <br />
+              <select onChange={selectCategory} className='form-control mt-2 mb-2' style={{width:'200px'}}>
+                {getCategory.map((item, index) => {
+                  return (
+                    <option key={index.toString()} value={item}>{item}</option>
+                  )
+                })}
+              </select>
+            </div>
+            <div>
+              <label>Search:</label>
+              <input placeholder='Search' className='form-control mt-2 mb-2' onChange={(e) => searchItems(e.target.value)} />
+            </div>
           </div>
           <div>
-            <label>Search:</label>
-            <input placeholder='Search' className='form-control mt-2 mb-2' onChange={(e) => searchItems(e.target.value)} />
-          </div>
           <label>Search By Checked</label>
+          <br />
           <div className='checkSearchMain'>
-            { checkListCategory.map((item, index) => {
-                return <label key={index.toString()}>
-                  <input type="checkbox" value={item} id="flexCheckDefault" onChange={handleChange} />{item}
-                </label>
-              })}
+            {checkListCategory.map((item, index) => {
+              return <label key={index.toString()}>
+                <input type="checkbox" value={item} id="flexCheckDefault" onChange={handleChange} />{item}
+              </label>
+            })}
           </div>
-          <ul className='filterTab'>
+          </div>
+          <ul className='filterTab clearfix'>
             {getCategory.map((item, index) => {
               return (<li key={index.toString()}>
                 <a className={chooseCategory === item ? 'tabActive' : 'tabClick'}
