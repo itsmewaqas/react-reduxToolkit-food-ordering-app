@@ -25,33 +25,78 @@ function Home() {
   //testimonial show randomly
   const testimonialData = TestimonialList.sort(() => Math.random() - Math.random());
 
+
+
+  const datavalue = [
+    {
+      id: 0,
+      value: 4000,
+      color: 'green'
+    },
+    {
+      id: 1,
+      value: 3000,
+      color: 'red'
+    },
+    {
+      id: 2,
+      value: 2000,
+      color: 'blue'
+    },
+    {
+      id: 3,
+      value: 1000,
+      color: 'yellow'
+    },
+    {
+      id: 4,
+      value: 6500,
+      color: 'purple'
+    },
+    {
+      id: 5,
+      value: 500,
+      color: 'gray'
+    }
+  ]
+
+
   useEffect(() => {
   }, [])
 
   return (
     <div>
       <h1>Home</h1>
+      <ul className='listbox'>
+          {datavalue.map((item, index) => (
+            <li key={index.toString()} style={{ backgroundColor: item.color, width: item.value / 100 }}>
+              <span style={{visibility:'hidden'}}>{item.value / 100}</span>
+              <i>{item.value}</i>
+            </li>
+          ))}
+        </ul>
       <Row>
         <Col md={12}>
-          <Form.Label>Future Items</Form.Label>
-          <div>
+          <Form.Label></Form.Label>
+          <h4>Future Items</h4>
+          <div className='whiteWarp clearfix'>
             {Object.keys(filteredItems).map((el, index) => (
-              <div key={index.toString()}>
+              <ul key={index.toString()}>
                 {filteredItems[el].slice(0, 1).map((item, index) => (
-                  <div key={index.toString()} className='futureBox'>
+                  <li key={index.toString()}>
                     <img src={item.itemImg} alt="" />
                     <p>{item.itemName}</p>
                     <p>{item.itemDescription}</p>
                     <p>{item.itemType}</p>
                     <p>{item.itemPrice}</p>
-                  </div>
+                  </li>
                 ))}
-              </div>
+              </ul>
             ))}
           </div>
         </Col>
         <Col md={2}>
-          <Form.Label>Restaurant</Form.Label>
+          <h4>Restaurant</h4>
           <div className='heroPic'>
             {herroPicture?.map((p, index) => (
               <img key={index.toString()} src={p.picture} alt="" />
@@ -59,7 +104,7 @@ function Home() {
           </div>
         </Col>
         <Col md={10}>
-          <Form.Label>Testimonials</Form.Label>
+          <h4>Testimonials</h4>
           <ul className='testimonialsList'>
             {testimonialData?.map((item, index) => (
               <li key={index.toString()}>

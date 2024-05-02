@@ -1177,7 +1177,8 @@ ul.testimonialsList li{
   padding: 15px 0px 20px;
   margin: 0px 10px 10px 0px;
   box-sizing: border-box;
-  background-color: #F6F1E9;
+  background-color: #fff;
+  border: #ccc solid 1px;
   position: relative;
   border-radius: 5px;
 }
@@ -1206,19 +1207,74 @@ ul.testimonialsList li p{
   padding: 5px 15px 15px;
   box-sizing: border-box;
 }
-.futureBox{
-   width: 200px;
-   margin: 15px;
-   padding: 15px;
-   box-sizing: border-box;
-   float: left;
-} 
-.futureBox img{
-  width: 100px;
+.whiteWarp{
+  background-color: #fff;
+  padding: 15px;
+  box-sizing: border-box;
+  display: block;
+  margin: 15px 0px;
+  border-radius: 10px;
+  margin-bottom: 30px;
+}
+.whiteWarp ul{
+  margin: 0px;
+  padding: 0px;
+  list-style: none;
+  display:block;
+}
+.whiteWarp ul li{
   margin: 15px;
-} 
-
-
+  padding: 15px;
+  box-sizing: border-box;
+  border: #ccc solid 1px;
+  text-align: left;
+  border-radius: 20px;
+  width: 22.4%;
+  float: left;
+}
+.whiteWarp ul li img{
+  margin: 15px auto;
+  width: 100px;
+  height: 100px;
+  border-radius: 100px;
+  display: block;
+}
+.whiteWarp ul li p{
+  padding: 5px 0px;
+  margin: 0px;
+  font-size: 14px;
+  line-height: 18px;
+  color: #3a3939;
+  font-family: "CircularStd-Medium";
+  font-weight: 400;
+}
+.listbox{
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  list-style: none;
+  flex-wrap: nowrap;
+  border-radius:12px;
+  padding:0px;
+  margin: 15px 0px;
+}
+.listbox li {
+ height: 10px;
+ border-radius: 10px;
+ margin: 0px 5px;
+ position: relative;
+}
+.listbox li i{
+  font-size: 10px;
+  font-style: normal;
+  position: absolute;
+  text-align: center;
+  left: 0px;
+  right: 0px;
+  margin: 0px auto;
+  display: block;
+  top: -20px;
+ }
 
 
 
